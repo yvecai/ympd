@@ -1,0 +1,135 @@
+:root {
+  --main-bg-color: #000000;
+  --selected-bg-color: #000000;
+  --control-bg-color: #000000;
+  --focus-text-color: #00ACFF;
+  --defocus-text-color: #006798;
+  --focus-border-color: #000000;
+  --defocus-border-color: #000000;
+}
+body{
+height:320px;
+width:240px;
+background-color:var(--main-bg-color);
+font-family:'Open Sans', sans-serif;
+font-family:'courier', monospace;
+font-size: 1em;
+font-weight: 800;
+letter-spacing: -1px;
+color: var(--focus-text-color)
+}
+#head{
+font-size: 1em;
+height:38px;
+background-color:var(--main-bg-color);
+}
+#current{
+float: left;
+height:36px;
+max-height:36px;
+width:180px;
+max-width:180px;
+overflow: hidden;
+background-color:var(--main-bg-color);
+border-color:var(--focus-border-color);
+border-style: solid;
+border-width: 1px;
+border-radius: 4px;
+padding: 0px 5px 0px 5px;
+line-height:36px;
+vertical-align:middle;
+}
+#status_left,#status_right{
+float: left;
+height:22px;
+max-height:22px;
+width:22px;
+max-width:22px;
+overflow: hidden;
+background-color:var(--main-bg-color);
+border-color:var(--focus-border-color);
+border-style: solid;
+border-width: 1px;
+border-radius: 4px;
+line-height:22px;
+vertical-align:middle;
+margin-top: 6px;
+
+}
+#waitIcon{
+width: 16px;
+}
+#syncIcon{
+width: 20px;
+display:none
+}
+#pauseIcon{
+width: 14px;
+display:none
+}
+#soundIcon{
+width: 20px;
+display:none
+}
+.svgIcon{
+fill: #00ACFF;
+}
+#radio_list{
+height:270px;
+max-height:270px;
+background-color:var(--main-bg-color);
+display:block;
+overflow-y: scroll;
+overflow-x: hidden;
+}
+.radio_list_entry{
+height:36px;
+max-height:36px;
+width:180px;
+max-width:180px;
+overflow: hidden;
+background-color:grey;
+border-color:var(--focus-border-color);
+border-style: solid;
+border-width: 1px;
+border-radius: 4px;
+margin: 5px;
+padding: 0px 5px 0px 5px;
+line-height:36px;
+vertical-align:middle;
+}
+
+.hidden{
+display:none
+}
+.shown{
+display:block
+}
+.current{
+background-color:var(--selected-bg-color);
+border-color:var(--focus-border-color);
+color: var(--focus-text-color);
+border-left: solid 2px var(--focus-text-color);
+}
+.unselected{
+background-color:var(--main-bg-color);
+border-color:var(--defocus-border-color);
+color: var(--defocus-text-color)
+}
+
+::-webkit-scrollbar {
+    width: 30px;
+    height: 2em
+}
+::-webkit-scrollbar-button {
+    background: var(--control-bg-color)
+}
+::-webkit-scrollbar-track-piece {
+    background: var(--main-bg-color)
+}
+::-webkit-scrollbar-thumb {
+    background: var(--control-bg-color);
+    border-style: solid;
+    border-width: 1px;
+    border-color:var(--defocus-text-color);
+}​
