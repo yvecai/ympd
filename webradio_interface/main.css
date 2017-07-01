@@ -6,31 +6,45 @@
   --defocus-text-color: #006798;
   --focus-border-color: #000000;
   --defocus-border-color: #000000;
-  --page_height: 320px;
-  --page_width: 240px;
+  --page_height: 640px;
+  --head_height: 60px;
+  --list_height: 580px;
+  
+  --page_width: 480px;
+  --current_width: 380px;
+  --list_width: 410px;
+  --scrollbar_width: 60px;
+  --icon_size: 40px;
 }
 body{
 height:var(--page_height);
 width:var(--page_width);
+max-height:var(--page_height);
+max-width:var(--page_width);
+background-color:#ffffff;
+/*
 background-color:var(--main-bg-color);
+*/
 font-family:'Open Sans', sans-serif;
 font-family:'courier', monospace;
-font-size: 1em;
+font-size: 2em;
 font-weight: 800;
 letter-spacing: -1px;
-color: var(--focus-text-color)
+color: var(--focus-text-color);
+overflow-x: hidden;
+overflow-y: hidden;
 }
 #head{
-font-size: 1em;
-height:38px;
+font-size: 1.1em;
+height:var(--head_height);
 background-color:var(--main-bg-color);
 }
 #current{
 float: left;
-height:36px;
-max-height:36px;
-width:180px;
-max-width:180px;
+height:1em;
+max-height:1em;
+width:var(--current_width);
+max-width:var(--current_width);
 overflow: hidden;
 background-color:var(--main-bg-color);
 border-color:var(--focus-border-color);
@@ -43,52 +57,59 @@ vertical-align:middle;
 }
 #status_left,#status_right{
 float: left;
-height:22px;
-max-height:22px;
-width:22px;
-max-width:22px;
+height:var(--icon_size);
+max-height:var(--icon_size);
+width:var(--icon_size);
+max-width:var(--icon_size);
 overflow: hidden;
 background-color:var(--main-bg-color);
 border-color:var(--focus-border-color);
 border-style: solid;
 border-width: 1px;
 border-radius: 4px;
-line-height:22px;
+line-height:2em;
 vertical-align:middle;
 margin-top: 6px;
 
 }
 #waitIcon{
-width: 16px;
+width: var(--icon_size);
 }
 #syncIcon{
-width: 20px;
+width: var(--icon_size);
 display:none
 }
 #pauseIcon{
-width: 14px;
+width: var(--icon_size);
 display:none
 }
 #soundIcon{
-width: 20px;
+width: var(--icon_size);
 display:none
 }
 .svgIcon{
 fill: #00ACFF;
 }
 #radio_list{
+/*
 height:270px;
+*/
+/*
 max-height:270px;
+*/
+height:var(--list_height);
+max-height:var(--list_height);
 background-color:var(--main-bg-color);
 display:block;
 overflow-y: scroll;
 overflow-x: hidden;
 }
 .radio_list_entry{
-height:36px;
-max-height:36px;
-width:180px;
-max-width:180px;
+height:2em;
+max-height:2em;
+line-height:2em;
+width:var(--list_width);
+max-width:var(--list_width);
 overflow: hidden;
 background-color:grey;
 border-color:var(--focus-border-color);
@@ -97,7 +118,6 @@ border-width: 1px;
 border-radius: 4px;
 margin: 5px;
 padding: 0px 5px 0px 5px;
-line-height:36px;
 vertical-align:middle;
 }
 
@@ -120,7 +140,7 @@ color: var(--defocus-text-color)
 }
 
 ::-webkit-scrollbar {
-    width: 30px;
+    width: var(--scrollbar_width);
     height: 2em
 }
 ::-webkit-scrollbar-button {
