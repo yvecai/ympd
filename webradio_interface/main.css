@@ -6,15 +6,15 @@
   --defocus-text-color: #006798;
   --focus-border-color: #000000;
   --defocus-border-color: #000000;
-  --page_height: 640px;
+  --page_height: 480px;
   --head_height: 60px;
-  --list_height: 580px;
+  --list_height: 420px;
   
-  --page_width: 480px;
-  --current_width: 380px;
-  --list_width: 410px;
-  --scrollbar_width: 60px;
-  --icon_size: 40px;
+  --page_width: 320px;
+  --scrollbar_width: 40px;
+  --icon_size: 24px;
+  --current_width: calc(var(--page_width)-2*var(--icon_size));
+  --list_width: calc(var(--page_width)-var(--scrollbar_width));
 }
 body{
 height:var(--page_height);
@@ -27,7 +27,7 @@ background-color:var(--main-bg-color);
 */
 font-family:'Open Sans', sans-serif;
 font-family:'courier', monospace;
-font-size: 2em;
+font-size: 1.4em;
 font-weight: 800;
 letter-spacing: -1px;
 color: var(--focus-text-color);
@@ -91,12 +91,6 @@ display:none
 fill: #00ACFF;
 }
 #radio_list{
-/*
-height:270px;
-*/
-/*
-max-height:270px;
-*/
 height:var(--list_height);
 max-height:var(--list_height);
 background-color:var(--main-bg-color);
