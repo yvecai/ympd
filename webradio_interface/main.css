@@ -6,10 +6,12 @@
   --defocus-text-color: #006798;
   --focus-border-color: #000000;
   --defocus-border-color: #000000;
+  --page_height: 320px;
+  --page_width: 240px;
 }
 body{
-height:320px;
-width:240px;
+height:var(--page_height);
+width:var(--page_width);
 background-color:var(--main-bg-color);
 font-family:'Open Sans', sans-serif;
 font-family:'courier', monospace;
