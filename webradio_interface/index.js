@@ -56,9 +56,11 @@ function list_playlist(data){
             //~ socket.send('MPD_API_PLAY_TRACK,'+this.getAttribute('index'));
             //~ };
         // Work with long clicks to avoid clicking when waking
+        radio_list_entry.onselectstart=function(e){return false;}
         radio_list_entry.onmousedown = function (e) {
             var index = this.getAttribute('index');
-            pressTimer = window.setTimeout(longclickTimeoutHandler(index),500);
+            var pos = this.getAttribute('pos');
+            pressTimer = window.setTimeout(longclickTimeoutHandler(index,pos),200);
         };
         radio_list_entry.onmouseup= function (e) {
             clearTimeout(pressTimer); //clear time on mouseup
@@ -71,7 +73,10 @@ function list_playlist(data){
 function longclickTimeoutHandler (index)
 {
     //https://stackoverflow.com/questions/3445855/javascript-how-to-pass-different-object-to-settimeout-handlers-created-in-a-loo
-    return function () {socket.send('MPD_API_PLAY_TRACK,'+index);}
+    return function () {
+        socket.send('MPD_API_PLAY_TRACK,'+index);
+        highlight_current_pos(pos);
+        }
 }
 function highlight_current_pos(pos){
     var list=document.getElementsByClassName('radio_list_entry');
