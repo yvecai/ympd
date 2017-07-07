@@ -3,18 +3,18 @@
   --selected-bg-color: #000000;
   --control-bg-color: #000000;
   --focus-text-color: #00ACFF;
-  --defocus-text-color: #006798;
+  --defocus-text-color: #002758;
   --focus-border-color: #000000;
   --defocus-border-color: #000000;
   
-  --page_height: 480px;
-  --page_width: 320px;
+  --page_height: 800px;
+  --page_width: 470px;
   
-  --head_height: 40px;
-  --icon_size: 24px;
+  --head_height: 60px;
+  --icon_size: 40px;
   --scrollbar_width: 40px;
   
-  --font_size: 22px;
+  --font_size: 32px;
   
   --list_height: calc(var(--page_height) - var(--head_height) - 10px);
   --current_width: calc(var(--page_width) - 2*var(--icon_size) - 20px);
