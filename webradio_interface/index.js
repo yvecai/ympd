@@ -60,7 +60,7 @@ function list_playlist(data){
         radio_list_entry.onmousedown = function (e) {
             var index = this.getAttribute('index');
             var pos = this.getAttribute('pos');
-            pressTimer = window.setTimeout(longclickTimeoutHandler(index,pos),200);
+            pressTimer = window.setTimeout(longclickTimeoutHandler(index,pos),500);
         };
         radio_list_entry.onmouseup= function (e) {
             clearTimeout(pressTimer); //clear time on mouseup
@@ -70,7 +70,7 @@ function list_playlist(data){
     }
     return
 }
-function longclickTimeoutHandler (index)
+function longclickTimeoutHandler (index,pos)
 {
     //https://stackoverflow.com/questions/3445855/javascript-how-to-pass-different-object-to-settimeout-handlers-created-in-a-loo
     return function () {
